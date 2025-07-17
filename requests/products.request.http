@@ -1,0 +1,28 @@
+@url = http://localhost:3001
+
+
+### 1 - Get all products
+GET {{url}}/products?page=1&limit=10
+
+### 2 - Get a product by id
+GET {{url}}/products/6
+
+### 3 - Create a new product
+POST {{url}}/products
+Content-Type: application/json
+
+{
+  "name": "Teclado",
+  "price": 12
+}
+
+### 4 - Update a product
+PATCH  {{url}}/products/3
+Content-Type: application/json
+
+{
+  "name": "Teclado"
+}
+
+### 5 - Delete a product
+DELETE {{url}}/products/5
